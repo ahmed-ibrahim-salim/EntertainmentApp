@@ -16,15 +16,18 @@ class MovieApi {
             "Accept": "application/json"
         ]
         AF.request("\(url)", method: .get,headers: headers).responseData{ (dataResponse) in
-
+            if dataResponse.data == nil{
+                    completion([])
+                }
             guard (dataResponse.data != nil),dataResponse.response?.statusCode == 200,
                   let data = dataResponse.data,
-                  let model = Coder().decode(toType: MoviesModel.self, from: data),
-                  let dataModel = model.results
+                  let model = Coder().decode(toType: MoviesModel.self, from: data)
+//                  let dataModel = model.results
             else{
                 return
             }
-            completion(dataModel)
+            completion(model.results)
+//
         }
     }
     
@@ -33,7 +36,7 @@ class MovieApi {
             "Accept": "application/json"
         ]
         AF.request("\(url)", method: .get,headers: headers).responseData{ (dataResponse) in
-
+                
                 guard (dataResponse.data != nil),dataResponse.response?.statusCode == 200,
                       let data = dataResponse.data,
                       let model = Coder().decode(toType: TrailerModel.self, from: data),

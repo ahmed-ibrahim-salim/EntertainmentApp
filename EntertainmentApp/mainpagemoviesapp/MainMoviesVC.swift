@@ -105,13 +105,14 @@ class MainMoviesVC: UIViewController {
         
             MovieApi.shared.getHomeData(url:
             "\(baseURL)\(listType)?api_key=\(apiKey)&page=\(page)",completion: { Movies in
-                if let listofmovies = Movies{
-                    print("network is connected")
-                }else{
-                    print("network is offff")
-                }
-                
+                print(Movies?.first)
+                                
                 var movieArra: [Movie] = Movies ?? []
+                
+                if movieArra.isEmpty{
+                    self.view.makeToast("Please check your internet connection and try again", duration: 3.0, position: .bottom)
+                                print("network is offff")
+                    }
                 var index = 0
                 for movie in movieArra{
                     let newimageurl = imagebaseURL + (movie.posterPath ?? "")
@@ -149,17 +150,17 @@ class MainMoviesVC: UIViewController {
 
                 }
 //
-//                if  self.popular?.count != 0{
-//                    print(movieArra.count)
-//                    self.myActivityIndicator.stopAnimating()
-//                    
-////                    self.topratedCollectionV.isHidden = false
-////                    self.popularCView.isHidden = false
-////                    self.upComingCVIew.isHidden = false
-//                }else{
+                if  self.popular?.count != 0{
+                    print(movieArra.count)
+                    self.myActivityIndicator.stopAnimating()
+                    
+//                    self.topratedCollectionV.isHidden = false
+//                    self.popularCView.isHidden = false
+//                    self.upComingCVIew.isHidden = false
+                }else{
 //                    print("no internet")
-//                    self.view.makeToast("Please check your internet connection and try again", duration: 3.0, position: .bottom)
-//                }
+//
+                }
             })
         
 }
