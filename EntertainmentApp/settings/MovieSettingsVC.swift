@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 
 class MovieSettingsVC: UIViewController {
+    
     @IBOutlet var settingTableV: UITableView!
     @IBOutlet weak var profileNameLbl: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
@@ -61,15 +62,15 @@ extension MovieSettingsVC: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let sheetController = SheetViewController(controller: BottomSheetController(),sizes: [.percent(0.3), .percent(0.25), .fixed(200)])
+        let sheetController = SheetVController()
         if indexPath.row == 0{
             
             // open setting -> language
-            UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
+//            UIApplication.shared.open(URL(string:UIApplication.openSettingsURLString)!)
 
-//            self.present(sheetController, animated: false, completion:{})
+            self.present(sheetController, animated: false, completion:{})
         }else if indexPath.row == 2{
-            let vc = self.handleStoryBoards(sbName: "MoviesMain", ID: "favourites", navTitle: "Favourites") as? FavouritesVC ?? UIViewController()
+            let vc = self.handleStoryBoards(sbName: "MoviesMain", ID: "favourites", navTitle: "Favourites".localized) as? FavouritesVC ?? UIViewController()
             navigationController?.pushViewController(vc, animated: true)        }
         
     }

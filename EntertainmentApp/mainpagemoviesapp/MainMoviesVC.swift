@@ -7,44 +7,60 @@
 
 import UIKit
 import SDWebImage
-
+import Toast_Swift
 
 class MainMoviesVC: UIViewController {
     @IBOutlet weak var upcomingLbl: UILabel!
+    @IBOutlet weak var mainscrollview: UIScrollView!
     @IBOutlet weak var topRatedLbl: UILabel!
     @IBOutlet weak var topratedCollectionV: UICollectionView!
     @IBOutlet weak var popularLbl: UILabel!
     @IBOutlet weak var popularCView: UICollectionView!
     @IBOutlet weak var upComingCVIew: UICollectionView!
-    var topRated: [Result]?
-    var popular: [Result]?
-    var upcoming: [Result]?
+    var topRated: [Movie]?
+    var popular: [Movie]?
+    var upcoming: [Movie]?
     
     var systemLanguage: NSString?
     
-    var afterfirstloadTopRated = false
-    var afterfirstloadPopular = false
-    var afterfirstloadUpcoming = false
-
     var topRatedPageNum = 0
     var popularPageNum = 0
     var upcomingPageNum = 0
+    
     // MARK: - LifeCycle
     override func viewWillAppear(_ animated: Bool) {
         systemLanguage = Bundle.main.preferredLocalizations.first as NSString?
     }
+    
+    let refreshControl = UIRefreshControl()
+    @IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var myscrolview: UIScrollView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setCollectionV()
         setSettingsButton()
         setHomePageStrings()
-
         
+        myscrolview.alwaysBounceVertical = true
+        myscrolview.bounces = true
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        
+        myscrolview.addSubview(refreshControl)
+        
+    }
+    @objc func refresh(_ sender: AnyObject) {
+       // Code to refresh table view
+        setMoviesLists(listType: "top_rated", page: topRatedPageNum)
+        setMoviesLists(listType: "popular", page: popularPageNum)
+        setMoviesLists(listType: "upcoming", page: upcomingPageNum)
+        
+        refreshControl.endRefreshing()
+
     }
     // MARK: - right bar button
     func setSettingsButton(){
-//        let image = UIImage(named: "settings")
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(settingsButtonAction))
         let menuBtn = UIButton(type: .custom)
             menuBtn.frame = CGRect(x: 0.0, y: 0.0, width: 20, height: 20)
             menuBtn.setImage(UIImage(named:"settings"), for: .normal)
@@ -73,30 +89,29 @@ class MainMoviesVC: UIViewController {
         popularCView.dataSource = self
         upComingCVIew.dataSource = self
         topratedCollectionV.dataSource = self
-//        if Locale.preferredLanguages.first == "ar"{
-//        }
-//        self.setMoviesLists(listType: "top_rated")
-//        self.setMoviesLists(listType: "popular")
-//        self.setMoviesLists(listType: "upcoming")
+
     }
     // MARK: - API Call
     func setMoviesLists(listType: String, page: Int = 1){
-        if page == 1{
-            if listType == "popular"{
-            self.afterfirstloadPopular = !self.afterfirstloadPopular
-            }else if listType == "top_rated"{
-                self.afterfirstloadTopRated = !self.afterfirstloadTopRated
-            }else if listType == "upcoming"{
-                self.afterfirstloadUpcoming = !self.afterfirstloadUpcoming
-            }
-        }
+//        topratedCollectionV.isHidden = true
+//        popularCView.isHidden = true
+//        upComingCVIew.isHidden = true
+
+        myActivityIndicator.startAnimating()
+        
         let baseURL = "https://api.themoviedb.org/3/movie/"
         let apiKey = "80adae09b523d3037018900367438854"
         let imagebaseURL = "https://image.tmdb.org/t/p/w500/"
         
             MovieApi.shared.getHomeData(url:
-            "\(baseURL)\(listType)?api_key=\(apiKey)&page=\(page)",completion: { Result in
-                var movieArra: [Result] = Result ?? []
+            "\(baseURL)\(listType)?api_key=\(apiKey)&page=\(page)",completion: { Movies in
+                if let listofmovies = Movies{
+                    print("network is connected")
+                }else{
+                    print("network is offff")
+                }
+                
+                var movieArra: [Movie] = Movies ?? []
                 var index = 0
                 for movie in movieArra{
                     let newimageurl = imagebaseURL + (movie.posterPath ?? "")
@@ -110,17 +125,16 @@ class MainMoviesVC: UIViewController {
                         self.topRated?.append(contentsOf: movieArra)
                     }else {
                         self.topRated = movieArra
-//                        if Locale.preferredLanguages.first == "ar"{
-//                            self.topratedCollectionV.transform = CGAffineTransform(scaleX: -1, y: 1)
-//                            self.topRated.reverse()
-//                        }
+//
                     }
                     self.topratedCollectionV.reloadData()
                 }
                 else if listType == "popular"{
                     if page != 1 {
                         self.popular?.append(contentsOf: movieArra)
+                        
                     }else {
+                        
                         self.popular = movieArra
                     }
                     self.popularCView.reloadData()
@@ -134,8 +148,20 @@ class MainMoviesVC: UIViewController {
                     self.upComingCVIew.reloadData()
 
                 }
-               
+//
+//                if  self.popular?.count != 0{
+//                    print(movieArra.count)
+//                    self.myActivityIndicator.stopAnimating()
+//                    
+////                    self.topratedCollectionV.isHidden = false
+////                    self.popularCView.isHidden = false
+////                    self.upComingCVIew.isHidden = false
+//                }else{
+//                    print("no internet")
+//                    self.view.makeToast("Please check your internet connection and try again", duration: 3.0, position: .bottom)
+//                }
             })
+        
 }
 // MARK: - Top Right Button Action
 @objc func settingsButtonAction(){
@@ -143,10 +169,9 @@ class MainMoviesVC: UIViewController {
     let vc = sb.instantiateViewController(identifier: "settingsvc") as? MovieSettingsVC ?? UIViewController()
 
     navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
-    
-}
  // MARK: - Extensions
 extension MainMoviesVC: UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -159,6 +184,7 @@ extension MainMoviesVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         else if collectionView == upComingCVIew {
             listCount = self.upcoming?.count ?? 1
         }
+//        print(topRated?.first?.id)
         return listCount
     }
     // MARK: - Cell
@@ -179,7 +205,6 @@ extension MainMoviesVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
         cell.contentView.layer.shadowRadius = 1.0
         cell.contentView.layer.shadowColor = UIColor.lightGray.cgColor
         cell.contentView.layer.shadowOpacity = 1
-//        cell.transform = CGAffineTransform(scaleX: -1, y: 1)
         return cell
     }
     // MARK: - View Layout
@@ -189,14 +214,14 @@ extension MainMoviesVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
     // MARK: - didSelectItem
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "MoviesMain", bundle: nil)
-        let vc = sb.instantiateViewController(identifier: "detailsvc") as? DetailsVCViewController ?? UIViewController()
+        let vc = sb.instantiateViewController(identifier: "detailsvc") as? DetailsVC ?? UIViewController()
         if collectionView == topratedCollectionV {
-            DetailsVCViewController.movie = topRated?[indexPath.row]
+            DetailsVC.movie = topRated?[indexPath.row]
         }else if collectionView == popularCView {
-            DetailsVCViewController.movie = popular?[indexPath.row]
+            DetailsVC.movie = popular?[indexPath.row]
 
         }else if collectionView == upComingCVIew {
-            DetailsVCViewController.movie = upcoming?[indexPath.row]
+            DetailsVC.movie = upcoming?[indexPath.row]
         }
         navigationController?.pushViewController(vc, animated: true)
         
@@ -204,56 +229,23 @@ extension MainMoviesVC: UICollectionViewDelegate,UICollectionViewDataSource,UICo
     // MARK: - Pagination
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if collectionView == topratedCollectionV {
-            if self.systemLanguage == "ar"{
-                if (indexPath.row == 19) && afterfirstloadTopRated{
-                    collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .right, animated: false)
-                    print("did scroll")
-                    self.afterfirstloadTopRated = false
-                }else if indexPath.row == (topRated?.count ?? 1) - 1 && !afterfirstloadTopRated{
-                    topRatedPageNum += 1
-                    setMoviesLists(listType: "top_rated", page: topRatedPageNum)
-                    collectionView.scrollToItem(at: IndexPath(item: indexPath.row - 19, section: 0), at: .right, animated: false)
-                }
-            }else if self.systemLanguage == "en"{
-                if indexPath.row == (topRated?.count ?? 1) - 1 {
-                    topRatedPageNum += 1
-                    setMoviesLists(listType: "top_rated", page: topRatedPageNum)
-                }
+            if topRatedPageNum < 3 {
+                collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
+                topRatedPageNum += 1
+                setMoviesLists(listType: "top_rated", page: topRatedPageNum)
+                collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
             }
-
         }else if collectionView == popularCView {
-            if self.systemLanguage == "ar"{
-                if (indexPath.row == 19) && afterfirstloadPopular{
-                    collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .right, animated: false)
-                    print("did scroll")
-                    self.afterfirstloadPopular = false
-                }else if indexPath.row == (popular?.count ?? 1) - 1 && !afterfirstloadPopular{
-                    popularPageNum += 1
-                    setMoviesLists(listType: "popular", page: popularPageNum)
-                    collectionView.scrollToItem(at: IndexPath(item: indexPath.row - 19, section: 0), at: .right, animated: false)
-                }
-            }else if self.systemLanguage == "en"{
-                if indexPath.row == (popular?.count ?? 1) - 1 {
-                    popularPageNum += 1
-                    setMoviesLists(listType: "popular", page: popularPageNum)
-                }
+            if popularPageNum < 3 {
+                collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
+                popularPageNum += 1
+                setMoviesLists(listType: "popular", page: popularPageNum)
             }
         }else if collectionView == upComingCVIew {
-            if self.systemLanguage == "ar"{
-                if (indexPath.row == 19) && afterfirstloadUpcoming{
-                    collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .right, animated: false)
-                    print("did scroll upcoming")
-                    self.afterfirstloadUpcoming = false
-                }else if indexPath.row == (upcoming?.count ?? 1) - 1 && !afterfirstloadUpcoming{
-                    upcomingPageNum += 1
-                    setMoviesLists(listType: "upcoming", page: upcomingPageNum)
-                    collectionView.scrollToItem(at: IndexPath(item: indexPath.row - 19, section: 0), at: .right, animated: false)
-                }
-            }else if self.systemLanguage == "en"{
-                if indexPath.row == (upcoming?.count ?? 1) - 1 {
-                    upcomingPageNum += 1
-                    setMoviesLists(listType: "upcoming", page: upcomingPageNum)
-                }
+            if upcomingPageNum < 3 {
+                collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .left, animated: false)
+                upcomingPageNum += 1
+                setMoviesLists(listType: "upcoming", page: upcomingPageNum)
             }
         }
         

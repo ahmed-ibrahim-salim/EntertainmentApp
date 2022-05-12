@@ -4,26 +4,25 @@
 //
 //  Created by Ahmad medo on 11/05/2022.
 //
-
+import youtube_ios_player_helper
 import UIKit
 
-class trailerVC: UIViewController {
+class TrailerVC: UIViewController, YTPlayerViewDelegate {
+    
+    static var movieID: String = ""
+    
+    @IBOutlet weak var youtubeplayer: YTPlayerView!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        youtubeplayer.load(withVideoId: TrailerVC.movieID, playerVars: ["inlineplayer":1])
+        
+//        view.addSubview(youtubeplayer)
 
-        // Do any additional setup after loading the view.
+
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+   
 }
