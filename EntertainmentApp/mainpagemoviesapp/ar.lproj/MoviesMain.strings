@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "1zr-Sh-ZEE"; */
+"1zr-Sh-ZEE.text" = "Label";
+
+/* Class = "UILabel"; text = "popular"; ObjectID = "31c-Tq-tXY"; */
+"31c-Tq-tXY.text" = "popular";
+
+/* Class = "UILabel"; text = "Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label "; ObjectID = "JuV-yu-t6h"; */
+"JuV-yu-t6h.text" = "Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label ";
+
+/* Class = "UILabel"; text = "upcomming"; ObjectID = "eJJ-Z6-FD2"; */
+"eJJ-Z6-FD2.text" = "upcomming";
+
+/* Class = "UILabel"; text = "top rated"; ObjectID = "ica-0V-Anv"; */
+"ica-0V-Anv.text" = "top rated";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "sCn-iT-dHD"; */
+"sCn-iT-dHD.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Watch Now"; ObjectID = "uAJ-xH-I4T"; */
+"uAJ-xH-I4T.normalTitle" = "Watch Now";
