@@ -10,7 +10,7 @@ class DetailsVC: UIViewController {
         let sb = UIStoryboard(name: "MoviesMain", bundle: nil)
         let vc = sb.instantiateViewController(identifier: "trailer") as? TrailerVC ?? UIViewController()
         if let hasTrailer = movieTrailerID {
-            TrailerVC.movieID = self.movieTrailerID ?? ""
+            TrailerVC.movieID = hasTrailer
             navigationController?.pushViewController(vc, animated: true)
         }else{
             print("movie has no Trailer")

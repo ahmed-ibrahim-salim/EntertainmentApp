@@ -8,6 +8,7 @@ import Foundation
 
 
 class Coder {
+    
     private var keyDecodingStrategy: JSONDecoder.KeyDecodingStrategy
     
     init(decodingStrategy: JSONDecoder.KeyDecodingStrategy = .useDefaultKeys){
@@ -50,10 +51,8 @@ class Coder {
 
 
 extension String {
-    func dictionary() -> [String: Any]?
-    {
-        if let data = self.data(using: .utf8)
-        {
+    func dictionary() -> [String: Any]?{
+        if let data = self.data(using: .utf8){
             do {
                 return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
             }

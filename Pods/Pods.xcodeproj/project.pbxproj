@@ -15,7 +15,7 @@
 		05102BD9E7BCB80DC7B64A34D0E7850B /* SDWebImageCacheSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CDCC5BE55D6BB5385386E484396452 /* SDWebImageCacheSerializer.m */; };
 		05D76FA82DD3C37B76FFC1689CEF9981 /* SDWebImageDownloaderDecryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 14C80D1F54982B7572073788C63C8FB1 /* SDWebImageDownloaderDecryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07A41F67B40B3C6C6C3DB862F1F633F8 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AB9887C40578343396812105429D00 /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		08E06C696103054C4B32302B72F87F9B /* youtube-ios-player-helper-Assets in Resources */ = {isa = PBXBuildFile; fileRef = D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */; };
+		08E06C696103054C4B32302B72F87F9B /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D674200BB0575198145B5455CF13275F /* Assets.bundle */; };
 		0BFA90EFCD3407716FFC60D140325188 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 565D51A4FF589304961CD2FCDE9671DD /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0C76BA74E22A5CFD8207C10026401D80 /* SDAnimatedImagePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AFDACF7BCD213C935BE4177CDC6C53B /* SDAnimatedImagePlayer.m */; };
 		0D0AF4DF934B7BE39EC6E287B003BBA6 /* SDMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = ADC67771FD51F7E93DFFCB9F6842D60C /* SDMemoryCache.m */; };
@@ -296,7 +296,7 @@
 		04AC27E4C059EFBA4B275A913E281B9B /* Pods-EntertainmentApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EntertainmentApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		058412D32E0994F91218FA865B1E47B8 /* SDWebImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SDWebImage-prefix.pch"; sourceTree = "<group>"; };
 		0589760447CF3FA9BAD94BE268466170 /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
-		05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cosmos; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cosmos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		07890BD10BA1AAA6D5CE297C07A88840 /* Pods-EntertainmentApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EntertainmentApp-umbrella.h"; sourceTree = "<group>"; };
 		07E3CE96984417FBA0E0B30178FDA03B /* SDAnimatedImageRep.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImageRep.h; path = SDWebImage/Core/SDAnimatedImageRep.h; sourceTree = "<group>"; };
 		0BF6572E00C8985F8BEF4DBEADF8DAEC /* SDFileAttributeHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDFileAttributeHelper.h; path = SDWebImage/Private/SDFileAttributeHelper.h; sourceTree = "<group>"; };
@@ -383,7 +383,7 @@
 		57CEF85348A90BBB37EFB6702BF8DD07 /* SDWebImageDownloaderRequestModifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDownloaderRequestModifier.h; path = SDWebImage/Core/SDWebImageDownloaderRequestModifier.h; sourceTree = "<group>"; };
 		5CCACDE01189E55B89E5654204584F48 /* SDImageCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCache.h; path = SDWebImage/Core/SDImageCache.h; sourceTree = "<group>"; };
 		5CE334A2610A136D7FBC4942535D4F12 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
-		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E2814CED4BEA6DECA8963180E4EF1D0 /* SDImageLoadersManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDImageLoadersManager.m; path = SDWebImage/Core/SDImageLoadersManager.m; sourceTree = "<group>"; };
 		5E657BF2571A324C8A06D627D0184F57 /* SDDisplayLink.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDDisplayLink.m; path = SDWebImage/Private/SDDisplayLink.m; sourceTree = "<group>"; };
 		5F2DFBAD380F02A987ABFD1BCA09E3A7 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+WebCache.m"; path = "SDWebImage/Core/UIImageView+WebCache.m"; sourceTree = "<group>"; };
@@ -424,7 +424,7 @@
 		81DDD3AC4AE55B7DB80C98AA5680328C /* Combine.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Combine.swift; path = Source/Combine.swift; sourceTree = "<group>"; };
 		823E195A48A97A55D4CBC6C6D7773A90 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		82C22791B8763CEB55B510F25DA8C559 /* SDGraphicsImageRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDGraphicsImageRenderer.m; path = SDWebImage/Core/SDGraphicsImageRenderer.m; sourceTree = "<group>"; };
-		8498A1B2C60117E181CA67921DDAE0B6 /* youtube-ios-player-helper */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "youtube-ios-player-helper"; path = youtube_ios_player_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8498A1B2C60117E181CA67921DDAE0B6 /* youtube_ios_player_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = youtube_ios_player_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DDCF0DAA5E37102ABB5DB71D22FF22 /* UIImage+ForceDecode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+ForceDecode.h"; path = "SDWebImage/Core/UIImage+ForceDecode.h"; sourceTree = "<group>"; };
 		85489B8C5BBF15DC7AEB0CC9E5B49A01 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		85E8197243A2F87C0C38BED89964645D /* RequestTaskMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RequestTaskMap.swift; path = Source/RequestTaskMap.swift; sourceTree = "<group>"; };
@@ -450,7 +450,7 @@
 		9AD36F1B687B1C578449E32804FDA100 /* SDWebImageIndicator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageIndicator.m; path = SDWebImage/Core/SDWebImageIndicator.m; sourceTree = "<group>"; };
 		9B51B93583998C8F85DB141C0B50BB14 /* SDDeviceHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDDeviceHelper.h; path = SDWebImage/Private/SDDeviceHelper.h; sourceTree = "<group>"; };
 		9B7C02B11F9B5957630A46E0BA7EBE03 /* Pods-EntertainmentApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EntertainmentApp-frameworks.sh"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E66D34EED4EE2B44C61B16764971CBD /* UIImage+MemoryCacheCost.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+MemoryCacheCost.h"; path = "SDWebImage/Core/UIImage+MemoryCacheCost.h"; sourceTree = "<group>"; };
 		9E85EB9E6289E2B8FA9DDF0A22DE4463 /* UIImageView+HighlightedWebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImageView+HighlightedWebCache.h"; path = "SDWebImage/Core/UIImageView+HighlightedWebCache.h"; sourceTree = "<group>"; };
 		9EED7642E1BFDB3683ABCCD09B3A9FAD /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
@@ -465,14 +465,14 @@
 		A4447F4699A549B70B09E2BD18670DED /* Concurrency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Concurrency.swift; path = Source/Concurrency.swift; sourceTree = "<group>"; };
 		A4A11390B9088BC82AE1569CB5847CA3 /* SDAnimatedImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAnimatedImage.m; path = SDWebImage/Core/SDAnimatedImage.m; sourceTree = "<group>"; };
 		A4CB9710A1BD5B0E97667A45BC2B5338 /* SDAnimatedImagePlayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDAnimatedImagePlayer.h; path = SDWebImage/Core/SDAnimatedImagePlayer.h; sourceTree = "<group>"; };
-		A4EEE7894643E29BDBB4D6E7B3E67237 /* MOLH */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MOLH; path = MOLH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4EEE7894643E29BDBB4D6E7B3E67237 /* MOLH.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MOLH.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A50C7D76485F44F7E7EBB5CF2E4FC237 /* MOLH.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MOLH.modulemap; sourceTree = "<group>"; };
 		ABECB86F9A1A968BCB2832661FDD7195 /* YTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YTPlayerView.h; path = Sources/YTPlayerView.h; sourceTree = "<group>"; };
 		AD073B3C6E459FA18ADD43C4F30810EE /* SDFileAttributeHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDFileAttributeHelper.m; path = SDWebImage/Private/SDFileAttributeHelper.m; sourceTree = "<group>"; };
 		ADA4DD7329793A99A18E3C7DA531D63F /* CosmosText.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosText.swift; path = Cosmos/CosmosText.swift; sourceTree = "<group>"; };
 		ADC67771FD51F7E93DFFCB9F6842D60C /* SDMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDMemoryCache.m; path = SDWebImage/Core/SDMemoryCache.m; sourceTree = "<group>"; };
 		B0537AA0D5A9795EA74D7159759B48A8 /* SDAssociatedObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDAssociatedObject.m; path = SDWebImage/Private/SDAssociatedObject.m; sourceTree = "<group>"; };
-		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SDWebImage; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B156A53B1E4E983B95CE205E1B36E7F1 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		B1ADB82BFD5EB14E2BD83E5F98DB5FBD /* NSData+ImageContentType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+ImageContentType.h"; path = "SDWebImage/Core/NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		B2B705B33DECEDAE2E8B1DECA455D850 /* SDmetamacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDmetamacros.h; path = SDWebImage/Private/SDmetamacros.h; sourceTree = "<group>"; };
@@ -489,7 +489,7 @@
 		C067C6EE64D6CE84FD623AAFB1829ED9 /* CosmosAccessibility.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosAccessibility.swift; path = Cosmos/CosmosAccessibility.swift; sourceTree = "<group>"; };
 		C0D547459E368B7F08F7F7CDA499224A /* UIView+WebCacheOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+WebCacheOperation.h"; path = "SDWebImage/Core/UIView+WebCacheOperation.h"; sourceTree = "<group>"; };
 		C3A6AF91417C8160E6C5054CE6089495 /* UIImage+ExtendedCacheData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+ExtendedCacheData.m"; path = "SDWebImage/Core/UIImage+ExtendedCacheData.m"; sourceTree = "<group>"; };
-		C3B975EF162ABB498EED994EDE93719A /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; includeInIndex = 1; name = "YTPlayerView-iframe-player.html"; path = "Sources/Assets/YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
+		C3B975EF162ABB498EED994EDE93719A /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = "YTPlayerView-iframe-player.html"; path = "Sources/Assets/YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
 		C4D2B3AC88B248EE3A06AC9613A6118D /* UIImage+Metadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Metadata.h"; path = "SDWebImage/Core/UIImage+Metadata.h"; sourceTree = "<group>"; };
 		C61DE0B536E55F3C7CDAA3FB24A01AB2 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		C6C3E3AA220D26A9B076EEBEF867A4B6 /* CosmosTouchTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CosmosTouchTarget.swift; path = Cosmos/Helpers/CosmosTouchTarget.swift; sourceTree = "<group>"; };
@@ -512,8 +512,8 @@
 		D5111E56F22274E60306528141AE21A5 /* SDWebImageDefine.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDWebImageDefine.h; path = SDWebImage/Core/SDWebImageDefine.h; sourceTree = "<group>"; };
 		D56A713E23F310EE364077E827821433 /* SDWebImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SDWebImage.debug.xcconfig; sourceTree = "<group>"; };
 		D5B0C103B22F0822381B398269B51F6D /* Alamofire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.release.xcconfig; sourceTree = "<group>"; };
-		D6043471C96F93DC41F7DD1E0D7D8B35 /* Toast-Swift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Toast-Swift"; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "youtube-ios-player-helper-Assets"; path = Assets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6043471C96F93DC41F7DD1E0D7D8B35 /* Toast_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Toast_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D674200BB0575198145B5455CF13275F /* Assets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6FD54D1C1D51B0BBEFE2AE21AF52D71 /* SDWebImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageDownloader.m; path = SDWebImage/Core/SDWebImageDownloader.m; sourceTree = "<group>"; };
 		D7B399277BEF7926FB4C4356006E8728 /* Cosmos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cosmos.release.xcconfig; sourceTree = "<group>"; };
 		D7E469899E7EF42467D2F95DDBF0BB0E /* youtube-ios-player-helper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "youtube-ios-player-helper.modulemap"; sourceTree = "<group>"; };
@@ -692,7 +692,6 @@
 				9EED7642E1BFDB3683ABCCD09B3A9FAD /* Validation.swift */,
 				CEC924CE8BCD19694CA7139043BBC590 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -721,7 +720,6 @@
 				EE20F82FA732571A27E5CE3800973E92 /* MOLHSizable.swift */,
 				5FB3DBA8F9E8262F709570B8703DAAC3 /* Support Files */,
 			);
-			name = MOLH;
 			path = MOLH;
 			sourceTree = "<group>";
 		};
@@ -757,7 +755,6 @@
 				C785711B092E305A86FAA7A040E4583B /* Resources */,
 				42AFF44F15327A8FD8A4E3A2CF7940B8 /* Support Files */,
 			);
-			name = "youtube-ios-player-helper";
 			path = "youtube-ios-player-helper";
 			sourceTree = "<group>";
 		};
@@ -929,14 +926,14 @@
 		43FF61E0E946C9DAC0025ED13743759E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */,
-				05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos */,
-				A4EEE7894643E29BDBB4D6E7B3E67237 /* MOLH */,
+				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
+				05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */,
+				A4EEE7894643E29BDBB4D6E7B3E67237 /* MOLH.framework */,
 				68F4FE7D69A2A947A540926F47882964 /* Pods-EntertainmentApp */,
-				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */,
-				D6043471C96F93DC41F7DD1E0D7D8B35 /* Toast-Swift */,
-				8498A1B2C60117E181CA67921DDAE0B6 /* youtube-ios-player-helper */,
-				D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */,
+				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */,
+				D6043471C96F93DC41F7DD1E0D7D8B35 /* Toast_Swift.framework */,
+				8498A1B2C60117E181CA67921DDAE0B6 /* youtube_ios_player_helper.framework */,
+				D674200BB0575198145B5455CF13275F /* Assets.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -962,7 +959,6 @@
 				DE06C09E30FD8226F446CA58083405EC /* Toast.swift */,
 				9C2371013A49A6F18EE04219D68F033B /* Support Files */,
 			);
-			name = "Toast-Swift";
 			path = "Toast-Swift";
 			sourceTree = "<group>";
 		};
@@ -1003,7 +999,6 @@
 				398324DFAFB780593B262AF88CD87792 /* Core */,
 				22815BC4C2B0A6C6A553EB2B7C212FF2 /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -1070,7 +1065,6 @@
 				BB859B1A869D1E638C78500AC9A2BD5A /* StarLayer.swift */,
 				0099FD01E5C845DEF0D1DB840D2EA40D /* Support Files */,
 			);
-			name = Cosmos;
 			path = Cosmos;
 			sourceTree = "<group>";
 		};
@@ -1225,7 +1219,7 @@
 			);
 			name = Cosmos;
 			productName = Cosmos;
-			productReference = 05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos */;
+			productReference = 05C4280976BF93DA8B36818DE2E2A5E0 /* Cosmos.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		13E17D11090C69C55E1CC5C52E359A6A /* MOLH */ = {
@@ -1243,7 +1237,7 @@
 			);
 			name = MOLH;
 			productName = MOLH;
-			productReference = A4EEE7894643E29BDBB4D6E7B3E67237 /* MOLH */;
+			productReference = A4EEE7894643E29BDBB4D6E7B3E67237 /* MOLH.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3820B3D61248CD2A225DA312BC70F110 /* youtube-ios-player-helper-Assets */ = {
@@ -1260,7 +1254,7 @@
 			);
 			name = "youtube-ios-player-helper-Assets";
 			productName = Assets;
-			productReference = D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */;
+			productReference = D674200BB0575198145B5455CF13275F /* Assets.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		3847153A6E5EEFB86565BA840768F429 /* SDWebImage */ = {
@@ -1278,7 +1272,7 @@
 			);
 			name = SDWebImage;
 			productName = SDWebImage;
-			productReference = B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */;
+			productReference = B0B214D775196BA7CA8E17E53048A493 /* SDWebImage.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		64CFDCD15E28FF933CF16832674B9ED7 /* Pods-EntertainmentApp */ = {
@@ -1320,7 +1314,7 @@
 			);
 			name = "Toast-Swift";
 			productName = Toast_Swift;
-			productReference = D6043471C96F93DC41F7DD1E0D7D8B35 /* Toast-Swift */;
+			productReference = D6043471C96F93DC41F7DD1E0D7D8B35 /* Toast_Swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D1A7AF186BE136DE56FD5699070589B8 /* youtube-ios-player-helper */ = {
@@ -1339,7 +1333,7 @@
 			);
 			name = "youtube-ios-player-helper";
 			productName = youtube_ios_player_helper;
-			productReference = 8498A1B2C60117E181CA67921DDAE0B6 /* youtube-ios-player-helper */;
+			productReference = 8498A1B2C60117E181CA67921DDAE0B6 /* youtube_ios_player_helper.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		EAAA1AD3A8A1B59AB91319EE40752C6D /* Alamofire */ = {
@@ -1357,7 +1351,7 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire */;
+			productReference = 5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -1367,7 +1361,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1320;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -1420,7 +1414,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08E06C696103054C4B32302B72F87F9B /* youtube-ios-player-helper-Assets in Resources */,
+				08E06C696103054C4B32302B72F87F9B /* Assets.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1709,7 +1703,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SDWebImage/SDWebImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1744,7 +1738,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Toast-Swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1836,7 +1830,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper";
 				IBSC_MODULE = youtube_ios_player_helper;
 				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/ResourceBundle-Assets-youtube-ios-player-helper-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = Assets;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1860,7 +1854,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MOLH/MOLH-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MOLH/MOLH-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1895,7 +1889,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1991,7 +1985,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Cosmos/Cosmos-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2063,7 +2057,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/youtube-ios-player-helper-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2090,7 +2084,7 @@
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper";
 				IBSC_MODULE = youtube_ios_player_helper;
 				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/ResourceBundle-Assets-youtube-ios-player-helper-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = Assets;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -2115,7 +2109,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2151,7 +2145,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Alamofire/Alamofire-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2185,7 +2179,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/SDWebImage/SDWebImage-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/SDWebImage/SDWebImage-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2219,7 +2213,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Cosmos/Cosmos-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Cosmos/Cosmos-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2254,7 +2248,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/MOLH/MOLH-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/MOLH/MOLH-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -2289,7 +2283,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/Toast-Swift/Toast-Swift-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/Toast-Swift/Toast-Swift-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
